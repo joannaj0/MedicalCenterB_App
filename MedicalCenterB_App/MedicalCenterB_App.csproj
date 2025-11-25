@@ -67,9 +67,58 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Pages\AboutUsPage.aspx" />
+    <Content Include="Pages\ClinicsPage.aspx" />
+    <Content Include="Pages\DoctorsPage.aspx" />
+    <Content Include="Pages\HomePage.aspx" />
+    <Content Include="Pages\Style.css" />
+    <Content Include="Pages\TestsPage.aspx" />
+    <Content Include="Pages\TreatmentsPage.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Pages\AboutUsPage.aspx.cs">
+      <DependentUpon>AboutUsPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\AboutUsPage.aspx.designer.cs">
+      <DependentUpon>AboutUsPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ClinicsPage.aspx.cs">
+      <DependentUpon>ClinicsPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\ClinicsPage.aspx.designer.cs">
+      <DependentUpon>ClinicsPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\DoctorsPage.aspx.cs">
+      <DependentUpon>DoctorsPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\DoctorsPage.aspx.designer.cs">
+      <DependentUpon>DoctorsPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\HomePage.aspx.cs">
+      <DependentUpon>HomePage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\HomePage.aspx.designer.cs">
+      <DependentUpon>HomePage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\TestsPage.aspx.cs">
+      <DependentUpon>TestsPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\TestsPage.aspx.designer.cs">
+      <DependentUpon>TestsPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\TreatmentsPage.aspx.cs">
+      <DependentUpon>TreatmentsPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\TreatmentsPage.aspx.designer.cs">
+      <DependentUpon>TreatmentsPage.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
