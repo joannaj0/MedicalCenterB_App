@@ -14,24 +14,24 @@
     <form id="form1" runat="server">
         <div draggable="auto">
 
-                <header class="d-flex justify-content-between py-3 border-bottom border-primary">
-                    <ul class="nav">
-                        <li><a href="https://localhost:44398/DoctorsPage.aspx" class="nav-link fs-5 text-primary me-2">Doctors</a></li>
-                         <li><a href="https://localhost:44398/TestsPage.aspx" class="nav-link fs-5 text-primary me-2">Tests</a></li>
-                         <li><a href="https://localhost:44398/TreatmentsPage.aspx" class="nav-link fs-5 text-primary me-2">Treatments</a></li>
-                        <li><a href="https://localhost:44398/ClinicsPage.aspx" class="nav-link fs-5 text-primary me-2">Clinics</a></li>
-                        <li><a href="https://localhost:44398/AboutUsPage.aspx" class="nav-link fs-5 text-primary me-2">About Us</a></li>
-                    </ul>
+            <header class="d-flex justify-content-between py-3 border-bottom border-primary">
+                <ul class="nav">
+                    <li><a href="https://localhost:44379/Pages/DoctorsPage.aspx" class="nav-link fs-5 text-primary me-2">Doctors</a></li>
+                    <li><a href="https://localhost:44379/Pages/TestsPage.aspx" class="nav-link fs-5 text-primary me-2">Tests</a></li>
+                    <li><a href="https://localhost:44379/Pages/TreatmentsPage.aspx" class="nav-link fs-5 text-primary me-2">Treatments</a></li>
+                    <li><a href="https://localhost:44379/Pages/ClinicsPage.aspx" class="nav-link fs-5 text-primary me-2">Clinics</a></li>
+                    <li><a href="https://localhost:44379/Pages/AboutUsPage.aspx" class="nav-link fs-5 text-primary me-2">About Us</a></li>
+                </ul>
 
-                     <div class="gap-2">
-                          <h2 class="text-primary">+1 222 555 333</h2>
-                    </div>
+                <div class="gap-2">
+                    <h2 class="text-primary">✆ +1 222 555 333</h2>
+                </div>
 
-                    <div class="gap-2">
-                        <asp:Button ID="ButtonLogIn" class="btn btn-primary me-2" runat="server" OnClick="LogIn_Click" Visible="true" Text="Patient account" UseSubmitBehavior="False"></asp:Button>
-                        <asp:Button ID="ButtonMode" class="btn btn-primary me-2" runat="server" OnClick="Mode_Click" UseSubmitBehavior="False"></asp:Button>
-                    </div>
-                </header>
+                <div class="gap-2">
+                    <asp:Button ID="ButtonLogIn" class="btn btn-primary me-2" runat="server" OnClick="LogIn_Click" Visible="true" Text="Patient account" UseSubmitBehavior="False"></asp:Button>
+                    <asp:Button ID="ButtonMode" class="btn btn-primary me-2" runat="server" OnClick="Mode_Click" UseSubmitBehavior="False"></asp:Button>
+                </div>
+            </header>
 
             <div class="container">
                 <div class="row align-items-center" style="height: 80vh;">
@@ -49,16 +49,39 @@
                             <div class="position-absolute top-50 start-50 translate-middle">
                                 <div class="input-group mb-3">
                                     <asp:TextBox class="form-control" ID="TextBoxSearch" runat="server"></asp:TextBox>
-                                    <asp:Button ID="ButtonSearch" class="btn btn-primary button-search" runat="server" OnClick="Search_Click" />
+                                    <asp:Button ID="ButtonSearchGeneral" class="btn btn-primary button-search" runat="server" OnClick="Search_Click" />
                                 </div>
                             </div>
                         </div>
                     </div>
+
+
+                    <div class="col-12 bg-primary-subtle rounded">
+                        <div class="m-3">
+                            <p class="fs-5 text-primary">Find your specialist</p>
+                            <div class="col-12">
+                                <asp:DropDownList ID="DropDownListLocation" class="btn btn-primary w-25" runat="server" AutoPostBack="true" OnSelectedIndexChanged="Menu_SelectedIndexChanged" AppendDataBoundItems="true">
+                                    <asp:ListItem Text="Opole" Value="" Selected="True"></asp:ListItem>
+                                </asp:DropDownList>
+
+                                <asp:DropDownList ID="DropDownDoctorType" class="btn btn-primary w-25" runat="server" AutoPostBack="true" OnSelectedIndexChanged="Menu_SelectedIndexChanged" AppendDataBoundItems="true">
+                                    <asp:ListItem Text="Dermatologist" Value="" Selected="True"></asp:ListItem>
+                                </asp:DropDownList>
+
+                                <asp:RadioButtonList class="d-flex gap-3 my-3" RepeatLayout="Flow" ID="RadioButtonListAge" runat="server">
+                                    <asp:ListItem class="text-primary" Text="Under 18" Value="Under18"></asp:ListItem>
+                                    <asp:ListItem class="text-primary" Text="Over 18" Value="Over18"></asp:ListItem>
+                                </asp:RadioButtonList>
+
+                                <asp:Button ID="ButtonSearchSpecific" class="btn btn-primary button-search" Text="Search" runat="server" OnClick="Search_Click" />
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
 
-
-            <footer class="footer text-center border-top py-3 border-primary">
+            <footer class="footer text-center border-top py-3 border-primary bg-primary-subtle">
                 <div class="text-primary">
                     AJ Medical Center<br />
                     2002 AJ Drive 002 Asia City<br />
